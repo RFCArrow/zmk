@@ -1,0 +1,21 @@
+
+if SHIELD_LETS_SPLIT_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "Let's Split Left"
+
+endif
+
+if SHIELD_LETS_SPLIT_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "Let's Split Right"
+
+endif
+
+if SHIELD_LETS_SPLIT_LEFT || SHIELD_LETS_SPLIT_RIGHT
+
+config I2C
+	default y
+
+endif
