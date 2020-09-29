@@ -62,6 +62,17 @@
 			>;
 		};
 
+		navigation_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |     |     |     |      |      |      |                   |       |      | UNDO | CUT  | COPY | PASTE |
+// |     |     |     |      |      |      |                   |       | CAPS | LEFT | DOWN | UP   | RIGHT |
+// |     |     |     |      |      |      |                   |       | INS  | HOME | PGDN | PGUP | END   |
+// |     |     |     |      |      |      |                   |       | ENT  | BSPC | DEL  |      |       |
+			bindings = <
+&trans &trans &trans &trans &trans &trans					&trans		&trans 		&kp UNDO	&kp CUT  	&kp COPY 	&kp PSTE
+&trans &trans &trans &trans &trans &trans					&trans		&kp CLCK   	&kp LARW 	&kp DARW	&kp UARW  	&kp RARW
+&trans &trans &trans &trans &trans &trans					&trans		&kp INS   	&kp HOME  	&kp PGDN   	&kp PGUP   	&kp END
+&trans &trans &trans &trans &trans &trans					&kp RET		&kp BKSP	&kp DEL 	&trans		&trans		&trans
 			>;
 		};
 
