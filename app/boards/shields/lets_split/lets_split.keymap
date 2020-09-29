@@ -104,6 +104,20 @@
 			>;
 		};
 
+		symbol_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |  {  |  &  |  *  |  (  |  }  |     |                   |     |     |     |      |      |      |
+// |  :  |  $  |  %  |  ^  |  +  |     |                   |     |     |     |      |      |      |
+// |  ~  |  !  |  "  |  £  | PIPE|     |                   |     |     |     |      |      |      |
+// |     |     |     |  (  |  )  |  _  |                   |     |     |     |      |      |      |
+			bindings = <
+&lsft RBKT	&lsft NUM_7	&lsft NUM_8	&lsft NUM_9 &lsft RBKT	&trans					&trans &trans &trans &trans &trans &trans
+&lsft SCLN	&lsft NUM_4	&lsft NUM_5	&lsft NUM_6 &lsft EQL	&trans					&trans &trans &trans &trans &trans &trans
+&lsft TILD	&lsft NUM_1	&lsft NUM_2	&lsft NUM_3 &lsft BSLH	&trans					&trans &trans &trans &trans &trans &trans
+&trans 		&trans 		&trans 		&lsft NUM_9	&lsft NUM_0 &lsft MINUS				&trans &trans &trans &trans &trans &trans
+			>;
+		};
+
 // ------------------------------------------------------------------------------------------------------------
 // | ~   |  !  |  @  | "#"  |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |  DEL  |
 // | DEL |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |   _   |   +   |  {   |   }   |  "|"  |
