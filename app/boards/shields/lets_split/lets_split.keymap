@@ -7,8 +7,8 @@
 #define MEDR 	1
 #define NAVR 	2
 #define MOUS 	3
-#define SYMB 	4
-#define NUM  	5
+#define NUM  	4
+#define SYMB 	5
 #define FUNC 	6
 #define BLE  	7
 
@@ -87,6 +87,20 @@
 &trans &trans &trans &trans &trans &trans					&trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans					&trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans					&trans &trans &trans &trans &trans &trans
+			>;
+		};
+
+		number_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |  [  |  7  |  8  |  9  |  ]  |     |                   |     |     |     |      |      |      |
+// |  ;  |  4  |  5  |  6  |  =  |     |                   |     |     |     |      |      |      |
+// | "#" |  1  |  2  |  3  |  \  |     |                   |     |     |     |      |      |      |
+// |     |     |     |  .  |  0  |  -  |                   |     |     |     |      |      |      |
+			bindings = <
+&kp LBKT	&kp NUM_7	&kp NUM_8	&kp NUM_9 	&RBKT 		&trans					&trans &trans &trans &trans &trans &trans
+&kp SCLN	&kp NUM_4	&kp NUM_5	&kp NUM_6 	&EQL 		&trans					&trans &trans &trans &trans &trans &trans
+&kp TILD	&kp NUM_1	&kp NUM_2	&kp NUM_3 	&BSLH 		&trans					&trans &trans &trans &trans &trans &trans
+&trans 		&trans 		&trans 		&kp DOT		&kp NUM_0 	&kp MINUS				&trans &trans &trans &trans &trans &trans
 			>;
 		};
 
