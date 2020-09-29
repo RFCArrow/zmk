@@ -48,7 +48,23 @@
 			>;
 		};
 
-		lower_layer {
+		media_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |     |     |     |      |      |      |                   |      |      |      |      |       |       |
+// |     |     |     |      |      |      |                   |      |      | PREV | VOL- | VOL+  | NEXT  |
+// |     |     |     |      |      |      |                   |      |      |      |      |       |       |
+// |     |     |     |      |      |      |                   | STOP | PLAY | MUTE |      |       |       |
+			bindings = <
+&trans &trans &trans &trans &trans &trans					&trans 		&trans 		&trans  	&trans 		&trans 		&trans
+&trans &trans &trans &trans &trans &trans					&trans    	&trans		&cp M_PREV 	&cp M_VOLD	&cp M_VOLU  &cp M_NEXT
+&trans &trans &trans &trans &trans &trans					&trans   	&trans  	&trans   	&trans    	&trans  	&trans
+&trans &trans &trans &trans &trans &trans					&cp M_STOP	&cp M_PLAY	&cp M_MUTE 	&trans		&trans  	&trans
+			>;
+		};
+
+			>;
+		};
+
 // ------------------------------------------------------------------------------------------------------------
 // | ~   |  !  |  @  | "#"  |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |  DEL  |
 // | DEL |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |   _   |   +   |  {   |   }   |  "|"  |
