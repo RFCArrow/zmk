@@ -27,14 +27,6 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-		hr: hold_reset {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping_term_ms = <500>;
-            flavor = "balanced";
-            bindings = <&reset>, <&trans>;
-        }
     };
 	keymap {
 		compatible = "zmk,keymap";
@@ -43,10 +35,10 @@
 // ------------------------------------------------------------------------------------------------------------
 // | RST |  W  |  E  |  R  |  T  | BT  |                  | BT  |  Y   |  U    |  I    |  O   |  RST |
 // |  Q  |  S  |  D  |  F  |  G  | NOP |                  | NOP |  H   |  J    |  K    |  L   |   P  |
-// |  A	 |  X  |  C  |  V  |  B  | NOP |                  | NOP |  N   |  M    |  ,    |  .   |   '  |
+// |  A	 |  X  |  C  |  V  |  B  | NOP |                  | NOP |  N   |  M    | ","   |  .   |   '  |
 // |  Z	 | NOP | NOP | ESC | SPC | TAB |                  | ENT | BSPC |  DEL  |  NOP  |  NOP |  /   |
 			bindings = <
-&hr 		&kp W   	&kp E   	&kp R    	 &kp T   	  &mo BLE			&mo BLE			&kp Y			&kp U		 	&kp I     		&kp O			&hr
+&trans 		&kp W   	&kp E   	&kp R    	 &kp T   	  &mo BLE			&mo BLE			&kp Y			&kp U		 	&kp I     		&kp O			&trans
 &kp Q		&hm LALT S	&hm LCTL D	&hm LSFT F	 &kp G   	  &trans			&trans 			&kp H			&hm LSFT J	 	&hm LCTL K		&hm LALT L		&kp P
 &hm LGUI A 	&hm RALT X  &kp C   	&kp V    	 &kp B   	  &trans			&trans 			&kp N			&kp M		 	&kp CMMA  		&hm RALT DOT	&hm LGUI QUOT
 &kp Z 		&trans		&trans  	&lt MEDR ESC &lt NAVR SPC &lt MOUS			&lt SYMB RET	&lt NUM BKSP	&lt FUNC DEL	&trans  		&trans			&kp FSLH
@@ -97,24 +89,24 @@
 
 		number_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  [  |  7  |  8  |  9  |  ]  |     |                   |     |     |     |      |      |      |
+// | "[" |  7  |  8  |  9  | "]" |     |                   |     |     |     |      |      |      |
 // |  ;  |  4  |  5  |  6  |  =  |     |                   |     |     |     |      |      |      |
 // | "#" |  1  |  2  |  3  |  \  |     |                   |     |     |     |      |      |      |
 // |     |     |     |  .  |  0  |  -  |                   |     |     |     |      |      |      |
 			bindings = <
-&kp LBKT	&kp NUM_7	&kp NUM_8	&kp NUM_9 	&RBKT 		&trans					&trans &trans &trans &trans &trans &trans
-&kp SCLN	&kp NUM_4	&kp NUM_5	&kp NUM_6 	&EQL 		&trans					&trans &trans &trans &trans &trans &trans
-&kp TILD	&kp NUM_1	&kp NUM_2	&kp NUM_3 	&BSLH 		&trans					&trans &trans &trans &trans &trans &trans
+&kp LBKT	&kp NUM_7	&kp NUM_8	&kp NUM_9 	&kp RBKT 		&trans					&trans &trans &trans &trans &trans &trans
+&kp SCLN	&kp NUM_4	&kp NUM_5	&kp NUM_6 	&kp EQL 		&trans					&trans &trans &trans &trans &trans &trans
+&kp TILD	&kp NUM_1	&kp NUM_2	&kp NUM_3 	&kp BSLH 		&trans					&trans &trans &trans &trans &trans &trans
 &trans 		&trans 		&trans 		&kp DOT		&kp NUM_0 	&kp MINUS				&trans &trans &trans &trans &trans &trans
 			>;
 		};
 
 		symbol_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  {  |  &  |  *  |  (  |  }  |     |                   |     |     |     |      |      |      |
+// | "{" |  &  |  *  | "(" | "}" |     |                   |     |     |     |      |      |      |
 // |  :  |  $  |  %  |  ^  |  +  |     |                   |     |     |     |      |      |      |
 // |  ~  |  !  |  "  |  £  | PIPE|     |                   |     |     |     |      |      |      |
-// |     |     |     |  (  |  )  |  _  |                   |     |     |     |      |      |      |
+// |     |     |     | "(" | ")" |  _  |                   |     |     |     |      |      |      |
 			bindings = <
 &lsft RBKT	&lsft NUM_7	&lsft NUM_8	&lsft NUM_9 &lsft RBKT	&trans					&trans &trans &trans &trans &trans &trans
 &lsft SCLN	&lsft NUM_4	&lsft NUM_5	&lsft NUM_6 &lsft EQL	&trans					&trans &trans &trans &trans &trans &trans
@@ -130,10 +122,10 @@
 // | F10 |  F1 |  F2 | F3 | PAUS|     |                   |     |     |     |      |      |      |
 // |     |     |     | APP| SPC | TAB |                   |     |     |     |      |      |      |
 			bindings = <
-&kp F12	&kp F7	&kp F8	&kp F9 	&PRSC 	&trans				&trans &trans &trans &trans &trans &trans
-&kp F11	&kp F4	&kp F5	&kp F6 	&SCLK 	&trans				&trans &trans &trans &trans &trans &trans
-&kp F10	&kp F1	&kp F2	&kp F3 	&PAUS 	&trans				&trans &trans &trans &trans &trans &trans
-&trans 	&trans 	&trans 	&kp GUI	&kp SPC &kp TAB				&trans &trans &trans &trans &trans &trans
+&kp F12	&kp F7	&kp F8	&kp F9 	&kp PRSC 	&trans				&trans &trans &trans &trans &trans &trans
+&kp F11	&kp F4	&kp F5	&kp F6 	&kp SCLK 	&trans				&trans &trans &trans &trans &trans &trans
+&kp F10	&kp F1	&kp F2	&kp F3 	&kp PAUS 	&trans				&trans &trans &trans &trans &trans &trans
+&trans 	&trans 	&trans 	&kp GUI	&kp SPC 	&kp TAB				&trans &trans &trans &trans &trans &trans
 			>;
 		};
 
