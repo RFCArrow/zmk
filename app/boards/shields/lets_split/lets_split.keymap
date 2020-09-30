@@ -35,7 +35,7 @@
 // ------------------------------------------------------------------------------------------------------------
 // | RST |  W  |  E  |  R  |  T  | BT  |                  | BT  |  Y   |  U    |  I    |  O   |  RST |
 // |  Q  |  S  |  D  |  F  |  G  | NOP |                  | NOP |  H   |  J    |  K    |  L   |   P  |
-// |  A	 |  X  |  C  |  V  |  B  | NOP |                  | NOP |  N   |  M    | ","   |  .   |   '  |
+// |  A	 |  X  |  C  |  V  |  B  | NOP |                  | NOP |  N   |  M    | CMA   |  .   |   '  |
 // |  Z	 | NOP | NOP | ESC | SPC | TAB |                  | ENT | BSPC |  DEL  |  NOP  |  NOP |  /   |
 			bindings = <
 &trans 		&kp W   	&kp E   	&kp R    	 &kp T   	  &mo BLE			&mo BLE			&kp Y			&kp U		 	&kp I     		&kp O			&trans
@@ -89,9 +89,9 @@
 
 		number_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | "[" |  7  |  8  |  9  | "]" |     |                   |     |     |     |      |      |      |
+// | RBT |  7  |  8  |  9  | LBT |     |                   |     |     |     |      |      |      |
 // |  ;  |  4  |  5  |  6  |  =  |     |                   |     |     |     |      |      |      |
-// | "#" |  1  |  2  |  3  |  \  |     |                   |     |     |     |      |      |      |
+// | HSH |  1  |  2  |  3  |  \  |     |                   |     |     |     |      |      |      |
 // |     |     |     |  .  |  0  |  -  |                   |     |     |     |      |      |      |
 			bindings = <
 &kp LBKT	&kp NUM_7	&kp NUM_8	&kp NUM_9 	&kp RBKT 		&trans					&trans &trans &trans &trans &trans &trans
@@ -103,10 +103,10 @@
 
 		symbol_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | "{" |  &  |  *  | "(" | "}" |     |                   |     |     |     |      |      |      |
+// | LBR |  &  |  *  | LPR | RBR |     |                   |     |     |     |      |      |      |
 // |  :  |  $  |  %  |  ^  |  +  |     |                   |     |     |     |      |      |      |
-// |  ~  |  !  |  "  |  £  | PIPE|     |                   |     |     |     |      |      |      |
-// |     |     |     | "(" | ")" |  _  |                   |     |     |     |      |      |      |
+// |  ~  |  !  |QUOT |  £  | PIPE|     |                   |     |     |     |      |      |      |
+// |     |     |     | LPR | RPR |  _  |                   |     |     |     |      |      |      |
 			bindings = <
 &lsft RBKT	&lsft NUM_7	&lsft NUM_8	&lsft NUM_9 &lsft RBKT	&trans					&trans &trans &trans &trans &trans &trans
 &lsft SCLN	&lsft NUM_4	&lsft NUM_5	&lsft NUM_6 &lsft EQL	&trans					&trans &trans &trans &trans &trans &trans
